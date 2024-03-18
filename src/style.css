@@ -1,0 +1,50 @@
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.router-link-active {
+	text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: Monrope, sans-serif;
+	color: #222;
+}
+
+h1 {
+	font-size: 52px;
+	font-weight: 700;
+	line-height: 1.269em;
+}
+
+h2 {
+	font-size: 38px;
+	font-weight: 700;
+	line-height: 1.289em;
+}
+
+p {
+	font-family: Neuton, sans-serif;
+	font-size: 19px;
+	line-height: 1.667em;
+	color: #626262;
+}
+
+.text-large {
+	font-size: 22px;
+	line-height: 1.545em;
+}
