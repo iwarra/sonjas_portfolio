@@ -51,7 +51,7 @@ import MailIcon from './components/icons/MailIcon.vue';
 .container {
 	display: flex;
 	flex-direction: column;
-	gap: 4rem;
+	gap: 3rem;
 	max-width: 1000px;
 	height: 100svh;
 }
@@ -62,7 +62,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding-block: 2rem;
-	border-bottom: 1px solid #e9e9e9;
+	/* border-bottom: 1px solid #e9e9e9; */
 
 	.header-logo {
 		display: flex;
@@ -90,7 +90,8 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	padding: 2rem;
-	background-color: #f2f2eb;
+	background-color: #f9f8f4;
+	/* background-color: #faf0f6b5; */
 
 	.border-icon {
 		border: 1px solid rgb(116, 115, 115);
@@ -125,7 +126,7 @@ footer {
 main {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	/* gap: 3rem; */
 	flex: 1;
 }
 </style>
