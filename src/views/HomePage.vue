@@ -115,7 +115,6 @@ import { books } from '../content/books';
 	display: flex;
 	flex-direction: column;
 	gap: 3rem;
-	min-height: 50svh;
 }
 
 .hero-content {
@@ -125,6 +124,7 @@ import { books } from '../content/books';
 	align-items: center;
 	justify-content: center;
 	gap: 2.6rem;
+	min-height: 50svh;
 }
 
 .hero-info {
