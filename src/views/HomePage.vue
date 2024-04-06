@@ -68,7 +68,7 @@ import { books } from '../content/books';
 				<div>
 					<h3>{{ book.title }}</h3>
 					<img
-						:src="book.photoUrl"
+						src="/src/assets/introspektion.jpg"
 						alt="" />
 				</div>
 				<div class="book-text">
