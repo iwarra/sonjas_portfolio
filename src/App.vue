@@ -47,7 +47,7 @@ import MailIcon from './components/icons/MailIcon.vue';
 	</div>
 </template>
 
-<style scoped>
+<style>
 .container {
 	display: flex;
 	flex-direction: column;
