@@ -25,7 +25,7 @@ import MailIcon from './components/icons/MailIcon.vue';
 			<RouterView />
 		</main>
 		<footer>
-			<div><small>Sonja Josipovic &copy; 2024</small></div>
+			<div class="footer-text"><small>Sonja Josipovic &copy; 2024</small></div>
 			<div class="footer-icons">
 				<a
 					href="mailto:sonja.josipovic@gmail.com"
@@ -128,5 +128,20 @@ main {
 	flex-direction: column;
 	/* gap: 3rem; */
 	flex: 1;
+}
+
+@media (max-width: 500px) {
+	footer {
+		display: flex;
+		flex-direction: column;
+		gap: 1.6rem;
+
+		.footer-icons {
+			order: 1;
+		}
+		.footer-text {
+			order: 2;
+		}
+	}
 }
 </style>

@@ -4,13 +4,11 @@ import { books } from '../content/books';
 
 <template>
 	<div class="hero">
-		<!-- <div class="hero-decoration"></div> -->
 		<div class="hero-content">
 			<img
 				class="hero-image"
 				src="/src/assets/sonja_and_nikki.jpg"
 				alt="" />
-			<span></span>
 			<div class="hero-info">
 				<h1>
 					<span class="accent">Välkommen</span>
@@ -29,8 +27,8 @@ import { books } from '../content/books';
 		</div>
 		<div class="divider"></div>
 	</div>
+
 	<div class="about">
-		<!-- <h2>Om Sonja</h2> -->
 		<q class="quote">För mig att skriva är som att andas - något som jag kunde inte leva utan.</q>
 		<div class="about-text">
 			<p>
@@ -52,26 +50,28 @@ import { books } from '../content/books';
 		</div>
 		<button class="button-primary">
 			<RouterLink
-				to="/om-sonja"
+				to="/om"
 				style="color: white"
 				>Mer om Sonja</RouterLink
 			>
 		</button>
+		<div class="divider"></div>
 	</div>
 
 	<section class="books">
 		<h2><span class="accent">Sonja's Böcker</span></h2>
-		<ul>
+		<ul class="books-list">
 			<li
 				class="book-row"
 				v-for="book in books"
 				key="book.title">
-				<img
-					style="height: 380px"
-					:src="book.photoUrl"
-					alt="" />
 				<div>
 					<h3>{{ book.title }}</h3>
+					<img
+						:src="book.photoUrl"
+						alt="" />
+				</div>
+				<div class="book-text">
 					<p v-html="book.description"></p>
 					<RouterLink
 						to="/introspektion"
@@ -87,7 +87,8 @@ import { books } from '../content/books';
 <style scoped>
 .divider {
 	width: 100%;
-	border-top: 2px solid #0c0d0e;
+	border-top: 2px solid #0c0d0e7a;
+	margin-top: 1rem;
 }
 
 .wave-divider {
@@ -110,32 +111,33 @@ import { books } from '../content/books';
 	transition: transform 0.35s, border-color 0.35s, background-color 0.35s;
 }
 
+.hero {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	min-height: 50svh;
+}
+
 .hero-content {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: center;
+	justify-content: center;
 	gap: 2.6rem;
-	min-height: 50svh;
 }
 
 .hero-info {
 	display: flex;
 	flex-direction: column;
 	gap: 1.3rem;
-	max-width: 40%;
+	max-width: 45%;
 
 	h1,
 	p {
 		padding: 0;
 		margin: 0;
 	}
-}
-
-.hero {
-	display: flex;
-	flex-direction: column;
-	gap: 3rem;
 }
 
 .hero-decoration {
@@ -156,14 +158,14 @@ import { books } from '../content/books';
 	display: grid;
 	grid-template-columns: 1fr 3fr;
 	gap: 2rem;
-	/* display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
 	align-items: center;
-	gap: 2rem; */
 
 	h3 {
 		margin-top: 0;
+	}
+
+	img {
+		height: 380px;
 	}
 }
 
@@ -183,7 +185,7 @@ ul {
 	text-align: center;
 	/* transform-style: preserve-3d; */
 	border-radius: 33px;
-	padding: 24px 40px;
+	padding: 22px 38px;
 	font-family: Manrope, sans-serif;
 	font-size: 16px;
 	line-height: 1.125em;
@@ -210,8 +212,8 @@ ul {
 	flex-direction: column;
 	gap: 2rem;
 	/* background-color: #f9f8f4; */
-	padding-top: 5rem;
-	padding-bottom: 3rem;
+	padding-top: 4rem;
+	/* padding-bottom: 3rem; */
 	position: relative;
 }
 
@@ -231,6 +233,55 @@ ul {
 }
 
 .books {
-	padding-top: 5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	padding-top: 4rem;
+}
+
+@media (max-width: 600px) {
+	.about-text {
+		grid-template-columns: 1fr;
+		gap: 0;
+		text-align: center;
+	}
+
+	.book-row {
+		grid-template-columns: 1fr;
+		justify-items: center;
+		gap: 1rem;
+	}
+
+	.book-text {
+		text-align: center;
+	}
+
+	.hero-content {
+		flex-direction: column;
+	}
+
+	.hero-info {
+		order: 1;
+		max-width: 100%;
+		align-items: center;
+
+		p {
+			text-align: center;
+		}
+
+		.cta {
+			align-self: center;
+			padding: 18px 28px;
+		}
+	}
+
+	.hero-image {
+		order: 2;
+		max-width: 100svw;
+	}
+
+	.divider {
+		order: 3;
+	}
 }
 </style>
