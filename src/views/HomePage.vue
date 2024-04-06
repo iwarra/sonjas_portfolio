@@ -7,7 +7,8 @@ import { books } from '../content/books';
 		<div class="hero-content">
 			<img
 				class="hero-image"
-				src="/src/assets/sonja_and_nikki.jpg"
+				src="
+				sonja_and_nikki.jpg"
 				alt="" />
 			<div class="hero-info">
 				<h1>
