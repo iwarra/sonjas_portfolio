@@ -4,7 +4,9 @@ import { poems } from '../content/introspektion.js';
 
 <template>
 	<div class="wrapper">
-		<h1 class="title">Introspektion</h1>
+		<h1>
+			<span class="accent">Inprospektion</span>
+		</h1>
 		<div class="intro">
 			<img
 				src="/src/assets/introspektion_bok.jpg"

@@ -2,7 +2,9 @@
 
 <template>
 	<div>
-		<h1>Om Sonja Josipovic</h1>
+		<h1>
+			<span class="accent">Om Sonja Josipovic</span>
+		</h1>
 	</div>
 </template>
 

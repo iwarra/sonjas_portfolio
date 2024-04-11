@@ -222,15 +222,6 @@ ul {
 	grid-template-columns: 1fr 1fr;
 }
 
-.accent {
-	-webkit-text-fill-color: inherit;
-	background-image: url('../assets/highlighter.svg');
-	background-position: 50% 90%;
-	background-repeat: no-repeat;
-	background-size: auto;
-	background-clip: content-box;
-}
-
 .books {
 	display: flex;
 	flex-direction: column;

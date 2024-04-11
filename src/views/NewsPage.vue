@@ -2,7 +2,9 @@
 
 <template>
 	<div>
-		<h1>Inkommande</h1>
+		<h1>
+			<span class="accent">Kommande</span>
+		</h1>
 	</div>
 </template>
 

@@ -63,4 +63,11 @@ img {
 	max-width: 100%;
 }
 
-#fbf4f8
+.accent {
+	-webkit-text-fill-color: inherit;
+	background-image: url('./assets/highlighter.svg');
+	background-position: 50% 90%;
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-clip: content-box;
+}
