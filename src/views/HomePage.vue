@@ -30,20 +30,17 @@ import { books } from '../content/books';
 		<q class="quote">För mig att skriva är som att andas - något som jag kunde inte leva utan.</q>
 		<div class="about-text">
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur similique dignissimos
-				molestias modi voluptates debitis molestiae tempora eveniet, ratione aut, optio fugiat ipsa
-				incidunt commodi vitae! Inventore maxime odit omnis! Lorem ipsum dolor sit amet consectetur,
-				adipisicing elit. In, dolores neque pariatur voluptatibus voluptate atque quibusdam
-				recusandae excepturi aperiam ipsum quia? Some extra text to make for equal length as this
-				column is a bit shorter.
+				Sonja föddes i ex-Jugoslavien. Hon skrev sin första dikt när hon bara var sju år gammal. Hon
+				har skrivit sedan dess, i olika former, språk och för olika publikationer. Hennes verk
+				inkluderar många tidningsartiklar, sångtexter och en roman. Alla hennes verk förenas av
+				hennes ordspel och djupa reflektioner av den mänskliga naturen som kommer från Sonjas
+				psykologexamen.
 			</p>
 			<p>
-				Consequatur omnis voluptate veritatis qui dignissimos rem illo. Earum? Lorem ipsum dolor sit
-				amet consectetur adipisicing elit. Expedita dolore fuga recusandae debitis rerum nulla
-				veritatis et, accusantium porro corporis perspiciatis odio repellat necessitatibus
-				aspernatur aliquam excepturi ullam. Unde, molestias? Lorem ipsum dolor sit amet consectetur
-				adipisicing elit. Consectetur similique dignissimos molestias modi voluptates debitis
-				molestiae tempora eveniet, ratione aut, optio fugiat ipsa incidunt commodi vitae!
+				Sonja flyttade till Sverige 2012 och är nu en publicerad författare på svenska. Med mycket
+				ansträngning och beslutsamhet erövrade hon språkbarriärerna och skrev på ett främmande
+				språk. Hennes första bok i Sverige kom ut 2024. Det är en diktsamling som heter
+				Introspektion.
 			</p>
 		</div>
 		<button class="button-primary">
@@ -102,7 +99,7 @@ import { books } from '../content/books';
 	border: none;
 	text-align: center;
 	border-radius: 33px;
-	padding: 24px 40px;
+	padding: 22px 38px;
 	font-family: Manrope, sans-serif;
 	font-size: 16px;
 	line-height: 1.125em;
@@ -194,16 +191,6 @@ ul {
 .cta:hover {
 	border-color: #f9f8f4;
 	background-color: #fbf4f8;
-}
-
-.quote {
-	text-align: center;
-	color: #181b1f;
-	font-family: 'Josefin Sans', Sans-serif;
-	font-size: 48px;
-	font-weight: 400;
-	line-height: 1.11em;
-	letter-spacing: -1.4px;
 }
 
 .about {

@@ -5,17 +5,28 @@ import { poems } from '../content/introspektion.js';
 <template>
 	<div class="wrapper">
 		<h1>
-			<span class="accent">Inprospektion</span>
+			<span class="accent">Introspektion</span>
 		</h1>
 		<div class="intro">
 			<img
 				src="/src/assets/introspektion_bok.jpg"
 				alt="" />
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sapiente harum corrupti. Ut
-				minus in, repudiandae, culpa aliquid porro voluptate rem ab magnam, est at ad iusto quisquam
-				reprehenderit enim.
-			</p>
+			<div>
+				<p class="text-large">
+					Introspektion är en diktsamling och Sonjas första bok på svenska. Den innehåller 104
+					dikter som reflekterar över människor, livet och vår plats i det. Den täcker olika känslor
+					och stämningar - kärlek, kamp, självutforskning och tillståndet i världen omkring oss.
+				</p>
+				<p class="text-large">
+					Boken talar om mörker och ljus och våra känslor och vårt humör, och hur vi kan vara som
+					människor - både de goda och de fula sidorna av vår natur.
+				</p>
+				<p class="text-large">Ta en djupdykning inuti och se vad du hittar.</p>
+			</div>
+		</div>
+		<div class="quote">
+			<q>Who looks outside, dreams; who looks inside, awakes.</q>
+			<span style="margin-left: 1rem">Carl Jung</span>
 		</div>
 		<ul class="poems-list">
 			<li
@@ -76,7 +87,6 @@ import { poems } from '../content/introspektion.js';
 
 	img {
 		max-width: 40%;
-		flex: 0 1 40%;
 	}
 
 	p {
@@ -86,5 +96,20 @@ import { poems } from '../content/introspektion.js';
 
 .poems-list {
 	list-style: none;
+}
+
+@media (max-width: 600px) {
+	.intro {
+		flex-direction: column;
+		align-items: center;
+
+		img {
+			max-width: 80svw;
+		}
+
+		p {
+			text-align: center;
+		}
+	}
 }
 </style>
