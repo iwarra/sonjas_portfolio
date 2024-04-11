@@ -111,5 +111,10 @@ import { poems } from '../content/introspektion.js';
 			text-align: center;
 		}
 	}
+
+	.poems-list {
+		padding: 0;
+		text-align: center;
+	}
 }
 </style>
