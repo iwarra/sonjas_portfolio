@@ -13,9 +13,7 @@ import { books } from '../content/books';
 				<h1>
 					<span class="accent">Välkommen</span>
 				</h1>
-				<p class="text-large">
-					Upptäck mer om Sonjas böcker, kommande evenemang och alla nya releaser
-				</p>
+				<p class="text-large">Upptäck mer om Sonjas böcker, kommande evenemang och alla nyheter</p>
 				<button class="cta">
 					<a
 						href="https://www.adlibris.com/se/bok/introspektion-9789189884830"
@@ -64,7 +62,7 @@ import { books } from '../content/books';
 			<li
 				class="book-row"
 				v-for="book in books"
-				key="book.title">
+				:key="book.title">
 				<div>
 					<h3>{{ book.title }}</h3>
 					<img
@@ -140,7 +138,7 @@ import { books } from '../content/books';
 	}
 }
 
-.hero-decoration {
+/* .hero-decoration {
 	position: absolute;
 	top: -4rem;
 	bottom: 0;
@@ -149,6 +147,7 @@ import { books } from '../content/books';
 	width: 40%;
 	z-index: -1;
 }
+*/
 
 .hero-image {
 	max-width: 45%;
@@ -256,6 +255,12 @@ ul {
 		text-align: center;
 	}
 
+	.divider {
+		order: 3;
+	}
+}
+
+@media (max-width: 800px) {
 	.hero-content {
 		flex-direction: column;
 	}
@@ -277,11 +282,7 @@ ul {
 
 	.hero-image {
 		order: 2;
-		max-width: 100svw;
-	}
-
-	.divider {
-		order: 3;
+		max-width: 80svw;
 	}
 }
 </style>
