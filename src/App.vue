@@ -16,7 +16,7 @@ import MailIcon from './components/icons/MailIcon.vue';
 				<span>Sonja Josipovic</span>
 			</div>
 			<nav class="nav-links">
-				<RouterLink to="/">Home</RouterLink>
+				<RouterLink to="/">Hem</RouterLink>
 				<RouterLink to="/nyheter">Nyheter</RouterLink>
 				<!-- <RouterLink to="/events">Events</RouterLink> -->
 			</nav>
