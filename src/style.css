@@ -17,6 +17,15 @@ a {
 	text-decoration: underline;
 }
 
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	min-width: 80svw;
+	max-width: 1000px;
+	min-height: 100svh;
+}
+
 h1,
 h2,
 h3,
@@ -47,6 +56,11 @@ p {
 .text-large {
 	font-size: 22px;
 	line-height: 1.545em;
+}
+
+img {
+	display: block;
+	max-width: 100%;
 }
 
 #fbf4f8

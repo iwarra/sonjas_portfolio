@@ -17,8 +17,8 @@ import MailIcon from './components/icons/MailIcon.vue';
 			</div>
 			<nav class="nav-links">
 				<RouterLink to="/">Home</RouterLink>
-				<RouterLink to="/press">Press</RouterLink>
-				<RouterLink to="/events">Events</RouterLink>
+				<RouterLink to="/nyheter">Nyheter</RouterLink>
+				<!-- <RouterLink to="/events">Events</RouterLink> -->
 			</nav>
 		</header>
 		<main>
@@ -48,14 +48,6 @@ import MailIcon from './components/icons/MailIcon.vue';
 </template>
 
 <style>
-.container {
-	display: flex;
-	flex-direction: column;
-	gap: 3rem;
-	max-width: 1000px;
-	height: 100svh;
-}
-
 header {
 	display: flex;
 	flex-direction: row;
