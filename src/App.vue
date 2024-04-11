@@ -55,25 +55,25 @@ header {
 	align-items: center;
 	padding-block: 2rem;
 	/* border-bottom: 1px solid #e9e9e9; */
+}
 
-	.header-logo {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 1rem;
+.header-logo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1rem;
 
-		color: #808080;
-	}
+	color: #808080;
+}
 
-	.logo {
-		height: 20px;
-	}
+.logo {
+	height: 20px;
+}
 
-	.nav-links {
-		display: flex;
-		flex-direction: row;
-		gap: 1rem;
-	}
+.nav-links {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
 }
 
 footer {
