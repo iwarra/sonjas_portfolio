@@ -15,25 +15,26 @@ import { poems } from '../content/introspektion.js';
 				reprehenderit enim.
 			</p>
 		</div>
+		<ul class="poems-list">
+			<li
+				v-for="poem in poems"
+				:key="poem.title">
+				<h2>
+					{{ poem.title }}
+				</h2>
+				<p v-html="poem.poem"></p>
+			</li>
+		</ul>
 	</div>
-	<ul style="list-style: none">
-		<li
-			v-for="poem in poems"
-			:key="poem.title">
-			<h2>
-				{{ poem.title }}
-			</h2>
-			<p v-html="poem.poem"></p>
-		</li>
-	</ul>
 </template>
 
 <style scoped>
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 3rem;
 }
+
 .title {
 	overflow: hidden;
 	white-space: nowrap;
@@ -66,13 +67,22 @@ import { poems } from '../content/introspektion.js';
 
 .intro {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	gap: 2rem;
-	flex-wrap: wrap;
-	flex: 0 1 40%;
+	/* flex-wrap: wrap;
+	flex: 0 1 40%; */
 
 	img {
-		max-height: fit-content;
+		max-width: 40%;
+		flex: 0 1 40%;
 	}
+
+	p {
+		display: inline-block;
+	}
+}
+
+.poems-list {
+	list-style: none;
 }
 </style>

@@ -7,7 +7,7 @@ import MailIcon from './components/icons/MailIcon.vue';
 
 <template>
 	<div class="container">
-		<header class="header">
+		<header>
 			<div class="header-logo">
 				<img
 					class="logo"
@@ -48,32 +48,38 @@ import MailIcon from './components/icons/MailIcon.vue';
 </template>
 
 <style>
-.header {
+header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 	padding-block: 2rem;
-	/* border-bottom: 1px solid #e9e9e9; */
+
+	.header-logo {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 1rem;
+
+		color: #808080;
+	}
+
+	.logo {
+		height: 20px;
+	}
+
+	.nav-links {
+		display: flex;
+		flex-direction: row;
+		gap: 1rem;
+	}
 }
 
-.header-logo {
+main {
 	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 1rem;
-
-	color: #808080;
-}
-
-.logo {
-	height: 20px;
-}
-
-.nav-links {
-	display: flex;
-	flex-direction: row;
-	gap: 1rem;
+	flex-direction: column;
+	/* gap: 3rem; */
+	flex: 1;
 }
 
 footer {
@@ -83,7 +89,6 @@ footer {
 	align-items: center;
 	padding: 2rem;
 	background-color: #f9f8f4;
-	/* background-color: #faf0f6b5; */
 
 	.border-icon {
 		border: 1px solid rgb(116, 115, 115);
@@ -113,13 +118,6 @@ footer {
 		flex-direction: row;
 		gap: 2rem;
 	}
-}
-
-main {
-	display: flex;
-	flex-direction: column;
-	/* gap: 3rem; */
-	flex: 1;
 }
 
 @media (max-width: 500px) {
