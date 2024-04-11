@@ -71,3 +71,13 @@ img {
 	background-size: auto;
 	background-clip: content-box;
 }
+
+.quote {
+	text-align: center;
+	color: #181b1f;
+	font-family: 'Josefin Sans', Sans-serif;
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 1.11em;
+	letter-spacing: -1.4px;
+}
