@@ -7,7 +7,7 @@ import MailIcon from './components/icons/MailIcon.vue';
 
 <template>
 	<div class="container">
-		<header>
+		<header class="header">
 			<div class="header-logo">
 				<img
 					class="logo"
@@ -48,7 +48,7 @@ import MailIcon from './components/icons/MailIcon.vue';
 </template>
 
 <style>
-header {
+.header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
