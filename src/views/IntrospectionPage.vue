@@ -82,8 +82,6 @@ import { poems } from '../content/introspektion.js';
 	display: flex;
 	flex-direction: row;
 	gap: 2rem;
-	/* flex-wrap: wrap;
-	flex: 0 1 40%; */
 
 	img {
 		max-width: 40%;
@@ -96,6 +94,10 @@ import { poems } from '../content/introspektion.js';
 
 .poems-list {
 	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin: 0 auto;
 }
 
 @media (max-width: 600px) {
