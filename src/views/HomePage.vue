@@ -14,13 +14,12 @@ import { books } from '../content/books';
 					<span class="accent">Välkommen</span>
 				</h1>
 				<p class="text-large">Upptäck mer om Sonjas böcker, kommande evenemang och alla nyheter</p>
-				<button class="cta">
-					<a
-						href="https://www.adlibris.com/se/bok/introspektion-9789189884830"
-						target="_blank"
-						>Köp Introspektion</a
-					>
-				</button>
+				<a
+					class="cta"
+					href="https://www.adlibris.com/se/bok/introspektion-9789189884830"
+					target="_blank"
+					>Köp Introspektion</a
+				>
 			</div>
 		</div>
 		<div class="divider"></div>
@@ -30,17 +29,18 @@ import { books } from '../content/books';
 		<q class="quote">För mig att skriva är som att andas - något som jag kunde inte leva utan.</q>
 		<div class="about-text">
 			<p>
-				Sonja föddes i ex-Jugoslavien. Hon skrev sin första dikt när hon bara var sju år gammal. Hon
-				har skrivit sedan dess, i olika former, språk och för olika publikationer. Hennes verk
-				inkluderar många tidningsartiklar, sångtexter och en roman. Alla hennes verk förenas av
-				hennes ordspel och djupa reflektioner av den mänskliga naturen som kommer från Sonjas
-				psykologexamen.
+				Sonja Josipovic är författare, frilansjournalist och psykolog. Hon föddes i ex-Jugoslavien.
+				Första dikten skrev hon när hon bara var sju år gammal och då började hennes resa där papper
+				och penna blev en oundviklig del av hennes liv. Hon har skrivit sedan dess, i olika former,
+				språk och för olika publikationer. Hennes verk inkluderar många tidningsartiklar, sångtexter
+				och en roman.
 			</p>
 			<p>
-				Sonja flyttade till Sverige 2012 och är nu en publicerad författare på svenska. Med mycket
-				ansträngning och beslutsamhet erövrade hon språkbarriärerna och skrev på ett främmande
-				språk. Hennes första bok i Sverige kom ut 2024. Det är en diktsamling som heter
-				Introspektion.
+				Sonja flyttade till Sverige 2012. Med mycket ansträngning och beslutsamhet erövrade hon
+				språkbarriärerna och skrev på ett främmande språk. Hennes första bok i Sverige kom ut 2024.
+				Introspektion är en diktsamling där hon skriver om vanliga människor, deras känslor, livet
+				och den oundvikliga - döden. Sonjas största inspiration är människor och hennes skrivande är
+				en blandning av poesi, psykologi och filosofi.
 			</p>
 		</div>
 		<button class="button-primary">
@@ -54,7 +54,7 @@ import { books } from '../content/books';
 	</div>
 
 	<section class="books">
-		<h2><span class="accent">Sonja's Böcker</span></h2>
+		<h2><span class="accent">Sonjas böcker</span></h2>
 		<ul class="books-list">
 			<li
 				class="book-row"
@@ -80,18 +80,6 @@ import { books } from '../content/books';
 </template>
 
 <style scoped>
-.divider {
-	width: 100%;
-	border-top: 2px solid #0c0d0e7a;
-	margin-top: 1rem;
-}
-
-.wave-divider {
-	position: absolute;
-	top: 100%;
-	color: yellow;
-}
-
 .button-primary {
 	margin: 0 auto;
 	background-color: black;
@@ -104,6 +92,7 @@ import { books } from '../content/books';
 	font-size: 16px;
 	line-height: 1.125em;
 	transition: transform 0.35s, border-color 0.35s, background-color 0.35s;
+	cursor: pointer;
 }
 
 .hero {
@@ -135,17 +124,6 @@ import { books } from '../content/books';
 	}
 }
 
-/* .hero-decoration {
-	position: absolute;
-	top: -4rem;
-	bottom: 0;
-	left: 0;
-	background-color: #f9f8f4;
-	width: 40%;
-	z-index: -1;
-}
-*/
-
 .hero-image {
 	max-width: 45%;
 }
@@ -165,11 +143,6 @@ import { books } from '../content/books';
 	}
 }
 
-/* section,
-.hero {
-	margin-bottom: 5rem;
-} */
-
 ul {
 	padding: 0;
 }
@@ -179,7 +152,6 @@ ul {
 	border: 1px solid #cecece;
 	background-color: white;
 	text-align: center;
-	/* transform-style: preserve-3d; */
 	border-radius: 33px;
 	padding: 22px 38px;
 	font-family: Manrope, sans-serif;
@@ -189,24 +161,23 @@ ul {
 }
 
 .cta:hover {
-	border-color: #f9f8f4;
-	background-color: #fbf4f8;
+	border-color: #979696;
+	cursor: pointer;
 }
 
 .about {
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
-	/* background-color: #f9f8f4; */
-	padding-top: 4rem;
-	/* padding-bottom: 3rem; */
-	position: relative;
+	gap: 3rem;
+	padding-top: 5rem;
+	margin-bottom: 2rem;
 }
 
 .about-text {
 	display: grid;
-	gap: 3rem;
+	gap: 4rem;
 	grid-template-columns: 1fr 1fr;
+	text-align: justify;
 }
 
 .books {

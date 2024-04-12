@@ -9,19 +9,22 @@
 			<img
 				src="/src/assets/sonja_josipovic.jpg"
 				alt="" />
-			<div>
+			<div class="about-text">
 				<p class="text-large">
-					Sonja föddes i ex-Jugoslavien. Hon skrev sin första dikt när hon bara var sju år gammal.
-					Hon har skrivit sedan dess, i olika former, språk och för olika publikationer. Hennes verk
-					inkluderar många tidningsartiklar, sångtexter och en roman. Alla hennes verk förenas av
-					hennes ordspel och djupa reflektioner av den mänskliga naturen som kommer från Sonjas
-					psykologexamen.
+					Sonja Josipovic är författare, frilansjournalist och psykolog. Hon föddes i
+					ex-Jugoslavien. Första dikten skrev hon när hon bara var sju år gammal och då började
+					hennes resa där papper och penna blev en oundviklig del av hennes liv. Hon har skrivit
+					sedan dess, i olika former, språk och för olika publikationer. Hennes verk inkluderar
+					många tidningsartiklar, sångtexter och en roman. Hon har skrivit och publicerat allt från
+					artiklar i modemagasin, låttexter för olika popartister, dikter, noveller och en roman som
+					fick stor uppmärksamhet i hennes hemland.
 				</p>
 				<p class="text-large">
-					Sonja flyttade till Sverige 2012 och är nu en publicerad författare på svenska. Med mycket
-					ansträngning och beslutsamhet erövrade hon språkbarriärerna och skrev på ett främmande
-					språk. Hennes första bok i Sverige kom ut 2024. Det är en diktsamling som heter
-					Introspektion.
+					Sonja flyttade till Sverige 2012. Med mycket ansträngning och beslutsamhet erövrade hon
+					språkbarriärerna och skrev på ett främmande språk. Hennes första bok i Sverige kom ut
+					2024. Introspektion är en diktsamling där hon skriver om vanliga människor, deras känslor,
+					livet och den oundvikliga - döden. Sonjas största inspiration är människor och hennes
+					skrivande är en blandning av poesi, psykologi och filosofi.
 				</p>
 			</div>
 		</div>
@@ -32,6 +35,11 @@
 .about {
 	display: flex;
 	gap: 2rem;
+	padding-block: 2rem;
+}
+
+.about-text {
+	padding: 1rem;
 }
 
 img {
