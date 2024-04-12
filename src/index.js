@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from './views/HomePage.vue';
-import IntrospectionPage from './views/IntrospectionPage.vue';
 import AboutPage from './views/AboutPage.vue';
 import NewsPage from './views/NewsPage.vue';
+import IntrospektionPage from './views/IntrospektionPage.vue';
 
 const routes = [
 	{ path: '/', component: HomePage },
 	{
 		path: '/introspektion',
-		component: IntrospectionPage,
+		component: IntrospektionPage,
 	},
 	{ path: '/om', component: AboutPage },
 	{ path: '/nyheter', component: NewsPage },
