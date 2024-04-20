@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "decap-cms-app": "^3.1.10",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
