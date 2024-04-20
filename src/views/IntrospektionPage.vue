@@ -10,9 +10,10 @@ const book = ref(null);
 const paper1 = ref(null);
 const paper2 = ref(null);
 const paper3 = ref(null);
+const paper4 = ref(null);
 
 let currentLocation = ref(1);
-const numOfPapers = ref(3);
+const numOfPapers = ref(4);
 const maxLocation = ref(numOfPapers.value + 1);
 
 function openBook() {
@@ -47,6 +48,10 @@ function goNextPage() {
 			case 3:
 				paper3.value.classList.add('flipped');
 				paper3.value.style.zIndex = 3;
+				break;
+			case 4:
+				paper4.value.classList.add('flipped');
+				paper4.value.style.zIndex = 4;
 				closeBook(false);
 				break;
 			default:
@@ -62,16 +67,21 @@ function goPrevPage() {
 			case 2:
 				closeBook(true);
 				paper1.value.classList.remove('flipped');
-				paper1.value.style.zIndex = 3;
+				paper1.value.style.zIndex = 4;
 				break;
 			case 3:
 				paper2.value.classList.remove('flipped');
-				paper2.value.style.zIndex = 2;
+				paper2.value.style.zIndex = 3;
 				break;
 			case 4:
 				openBook();
 				paper3.value.classList.remove('flipped');
-				paper3.value.style.zIndex = 1;
+				paper3.value.style.zIndex = 2;
+				break;
+			case 5:
+				openBook();
+				paper4.value.classList.remove('flipped');
+				paper4.value.style.zIndex = 1;
 				break;
 			default:
 				throw new Error('unkown state');
@@ -93,9 +103,10 @@ function goPrevPage() {
 				alt="" />
 			<div>
 				<p class="text-large">
-					Introspektion är en diktsamling och Sonjas första bok på svenska. Den innehåller 104
-					dikter som reflekterar över människor, livet och vår plats i det. Den täcker olika känslor
-					och stämningar - kärlek, kamp, självutforskning och tillståndet i världen omkring oss.
+					Introspektion är en diktsamling och Sonjas första bok på svenska. Den innehåller över
+					hundra dikter som reflekterar över människor, livet och vår plats i det. Den täcker olika
+					känslor och stämningar - kärlek, kamp, självutforskning och tillståndet i världen omkring
+					oss.
 				</p>
 				<p class="text-large">
 					Boken talar om mörker och ljus och våra känslor och vårt humör, och hur vi kan vara som
@@ -105,7 +116,9 @@ function goPrevPage() {
 			</div>
 		</div>
 		<div class="divider"></div>
-		<div class="quote">
+		<div
+			class="quote"
+			style="padding-top: 2rem">
 			<q>Who looks outside, dreams; who looks inside, awakes.</q>
 			<span style="margin-left: 1rem">Carl Jung</span>
 		</div>
@@ -115,7 +128,7 @@ function goPrevPage() {
 				v-for="poem in poems"
 				:key="poem.title">
 				<h2>
-					{{ poem.title }}
+					<span class="accent">{{ poem.title }}</span>
 				</h2>
 				<p v-html="poem.poem"></p>
 			</li>
@@ -144,9 +157,7 @@ function goPrevPage() {
 						</div>
 					</div>
 					<div class="back">
-						<div
-							id="b1"
-							class="back-content"></div>
+						<div class="back-content"></div>
 					</div>
 				</div>
 				<div
@@ -162,9 +173,7 @@ function goPrevPage() {
 						</div>
 					</div>
 					<div class="back">
-						<div
-							id="b2"
-							class="back-content"></div>
+						<div class="back-content"></div>
 					</div>
 				</div>
 				<div
@@ -180,10 +189,13 @@ function goPrevPage() {
 						</div>
 					</div>
 					<div class="back">
-						<div
-							id="b3"
-							class="back-content"></div>
+						<div class="back-content"></div>
 					</div>
+				</div>
+				<div
+					id="p4"
+					ref="paper4"
+					class="paper">
 					<div class="front">
 						<div
 							id="f4"
@@ -210,7 +222,6 @@ function goPrevPage() {
 					</div>
 				</div>
 			</div>
-
 			<button
 				ref="nextBtn"
 				@click="goNextPage">
@@ -227,36 +238,6 @@ function goPrevPage() {
 	gap: 3rem;
 }
 
-.title {
-	overflow: hidden;
-	white-space: nowrap;
-	border-right: 2px solid transparent;
-	width: 0;
-	max-width: max-content;
-	animation: typing 2s steps(30, end) forwards, blinking 2.5s 1;
-}
-
-@keyframes typing {
-	from {
-		width: 0;
-	}
-	to {
-		width: 100%;
-	}
-}
-
-@keyframes blinking {
-	0% {
-		border-color: transparent;
-	}
-	50% {
-		border-color: black;
-	}
-	100% {
-		border-color: transparent;
-	}
-}
-
 .intro {
 	display: flex;
 	flex-direction: row;
@@ -271,8 +252,9 @@ function goPrevPage() {
 	list-style: none;
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 2.5rem;
 	margin: 0 auto;
+	padding: 2.5rem 0 0 0;
 }
 
 .book-wrapper {
@@ -378,29 +360,57 @@ button:hover i {
 
 /* Paper stack order */
 #p1 {
-	z-index: 3;
+	z-index: 4;
 }
 
 #p2 {
-	z-index: 2;
+	z-index: 3;
 }
 
 #p3 {
+	z-index: 2;
+}
+
+#p4 {
 	z-index: 1;
 }
 
+#p2 .front,
+#p2 .back {
+	/* background-color: aqua; */
+	transform-origin: left !important;
+	transition: transform 0.6s ease-in-out !important;
+}
+
+#p2 .flipped .front,
+#p2 .flipped .back {
+	transform: rotateY(-180deg) !important;
+}
+
 @media (max-width: 650px) {
+	h1 {
+		text-align: center;
+	}
+
 	.intro {
 		flex-direction: column;
 		align-items: center;
+		padding-inline: 1rem;
 
 		img {
+			/* flex: 1 0 100%; */
 			max-width: 80svw;
 		}
 
 		.text-large {
 			text-align: center;
 		}
+	}
+
+	.quote {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
 	}
 }
 

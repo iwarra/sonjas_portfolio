@@ -47,9 +47,15 @@ img {
 }
 
 @media (max-width: 600px) {
+	h1 {
+		text-align: center;
+	}
+
 	.about {
 		flex-direction: column;
 		align-items: center;
+		padding-inline: 1rem;
+
 		img {
 			max-width: 80svw;
 		}

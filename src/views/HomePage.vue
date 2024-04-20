@@ -30,17 +30,17 @@ import { books } from '../content/books';
 		<div class="about-text">
 			<p>
 				Sonja Josipovic är författare, frilansjournalist och psykolog. Hon föddes i ex-Jugoslavien.
-				Första dikten skrev hon när hon bara var sju år gammal och då började hennes resa där papper
-				och penna blev en oundviklig del av hennes liv. Hon har skrivit sedan dess, i olika former,
-				språk och för olika publikationer. Hennes verk inkluderar många tidningsartiklar, sångtexter
-				och en roman.
+				Första dikten skrev hon när hon var ungefär sju år gammal och då började hennes skrivresa
+				där papper och penna blev en oundviklig del av hennes liv. Hon har skrivit sedan dess, i
+				olika former, språk och för olika publikationer. Hennes verk inkluderar många
+				tidningsartiklar, sångtexter och en roman som fick stor uppmärksamhet i hennes hemland.
 			</p>
 			<p>
 				Sonja flyttade till Sverige 2012. Med mycket ansträngning och beslutsamhet erövrade hon
-				språkbarriärerna och skrev på ett främmande språk. Hennes första bok i Sverige kom ut 2024.
-				Introspektion är en diktsamling där hon skriver om vanliga människor, deras känslor, livet
-				och den oundvikliga - döden. Sonjas största inspiration är människor och hennes skrivande är
-				en blandning av poesi, psykologi och filosofi.
+				språkbarriärerna och skrev på ett främmande språk. Introspektion, hennes första bok på
+				svenska, kom ut 2024. Introspektion är en diktsamling där hon skriver om oss, vanliga
+				människor, våra känslor, livet och den oundvikliga - döden. Människor är Sonjas största
+				inspiration och hennes skrivande är en blandning av poesi, psykologi och filosofi.
 			</p>
 		</div>
 		<button class="button-primary">
@@ -60,19 +60,19 @@ import { books } from '../content/books';
 				class="book-row"
 				v-for="book in books"
 				:key="book.title">
-				<div>
-					<h3>{{ book.title }}</h3>
+				<h3>{{ book.title }}</h3>
+				<div class="book-info">
 					<img
 						src="/src/assets/introspektion.jpg"
 						alt="" />
-				</div>
-				<div class="book-text">
-					<p v-html="book.description"></p>
-					<RouterLink
-						to="/introspektion"
-						style="text-decoration: underline"
-						>Läs mer</RouterLink
-					>
+					<div class="book-text">
+						<p v-html="book.description"></p>
+						<RouterLink
+							to="/introspektion"
+							style="text-decoration: underline"
+							>Läs mer</RouterLink
+						>
+					</div>
 				</div>
 			</li>
 		</ul>
@@ -117,7 +117,6 @@ import { books } from '../content/books';
 	gap: 1.3rem;
 	max-width: 45%;
 
-	h1,
 	p {
 		padding: 0;
 		margin: 0;
@@ -129,10 +128,12 @@ import { books } from '../content/books';
 }
 
 .book-row {
-	display: grid;
-	grid-template-columns: 1fr 3fr;
+	display: flex;
+	flex-direction: column;
+	/* display: grid;
+	grid-template-columns: 1fr 3fr; */
 	gap: 2rem;
-	align-items: center;
+	align-items: start;
 
 	h3 {
 		margin-top: 0;
@@ -143,13 +144,20 @@ import { books } from '../content/books';
 	}
 }
 
+.book-info {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 2rem;
+}
+
 ul {
 	padding: 0;
 }
 
 .cta {
 	align-self: flex-start;
-	border: 1px solid #cecece;
+	border: 1px solid #979696;
 	background-color: white;
 	text-align: center;
 	border-radius: 33px;
@@ -161,7 +169,7 @@ ul {
 }
 
 .cta:hover {
-	border-color: #979696;
+	border-color: black;
 	cursor: pointer;
 }
 
@@ -178,6 +186,7 @@ ul {
 	gap: 4rem;
 	grid-template-columns: 1fr 1fr;
 	text-align: justify;
+	padding-inline: 1rem;
 }
 
 .books {
@@ -185,6 +194,7 @@ ul {
 	flex-direction: column;
 	gap: 1.5rem;
 	padding-top: 4rem;
+	padding-inline: 1rem;
 }
 
 @media (max-width: 600px) {
@@ -194,10 +204,23 @@ ul {
 		text-align: center;
 	}
 
+	.books h2 {
+		text-align: center;
+	}
+
 	.book-row {
-		grid-template-columns: 1fr;
+		align-items: center;
+	}
+
+	.book-info {
+		flex-direction: column;
 		justify-items: center;
 		gap: 1rem;
+		padding-inline: 1rem;
+
+		img {
+			flex: 0 1 100%;
+		}
 	}
 
 	.book-text {
@@ -218,9 +241,13 @@ ul {
 		order: 1;
 		max-width: 100%;
 		align-items: center;
+		padding-inline: 1rem;
+		gap: 0;
 
 		p {
 			text-align: center;
+			padding-top: 0.5rem;
+			padding-bottom: 2.5rem;
 		}
 
 		.cta {

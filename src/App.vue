@@ -8,12 +8,16 @@ import MailIcon from './components/icons/MailIcon.vue';
 <template>
 	<div class="container">
 		<header>
-			<div class="header-logo">
-				<img
-					class="logo"
-					src="/js.png"
-					alt="logo" />
-				<span>Sonja Josipovic</span>
+			<div>
+				<a
+					href="/"
+					class="header-logo">
+					<img
+						class="logo"
+						src="/js.png"
+						alt="logo" />
+					<span>Sonja Josipovic</span>
+				</a>
 			</div>
 			<nav class="nav-links">
 				<RouterLink to="/">Hem</RouterLink>
@@ -88,10 +92,11 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	padding: 2rem;
-	background-color: #f9f8f4;
+	border-top: 1px solid #e9e9e9;
+	/* background-color: #f9f8f4; */
 
 	.border-icon {
-		border: 1px solid rgb(116, 115, 115);
+		border: 1px solid rgb(186, 186, 186);
 		border-radius: 50%;
 		height: 40px;
 		line-height: 40px;
@@ -99,18 +104,22 @@ footer {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		color: rgb(116, 115, 115);
+		color: rgb(177, 177, 177);
+		background-color: #c3dfe2;
 	}
 
 	.border-icon:hover {
-		border: 1px solid black;
-		color: black;
+		border: 1px solid #7a9093;
 		cursor: pointer;
+
+		svg {
+			color: #425565;
+		}
 	}
 
 	svg {
 		font-size: 1rem;
-		color: rgb(116, 115, 115);
+		color: rgb(95, 94, 94);
 	}
 
 	.footer-icons {
