@@ -93,6 +93,7 @@ import { books } from '../content/books';
 	line-height: 1.125em;
 	transition: transform 0.35s, border-color 0.35s, background-color 0.35s;
 	cursor: pointer;
+	box-shadow: rgba(0, 0, 0, 0.26) 2.8px 2.8px 3.8px;
 }
 
 .hero {
@@ -160,16 +161,18 @@ ul {
 	border: 1px solid #979696;
 	background-color: white;
 	text-align: center;
-	border-radius: 33px;
+	border-radius: 34px;
 	padding: 22px 38px;
 	font-family: Manrope, sans-serif;
 	font-size: 16px;
 	line-height: 1.125em;
 	transition: transform 0.35s, border-color 0.35s, background-color 0.35s;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .cta:hover {
-	border-color: black;
+	border-color: #707070;
+	box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 4px;
 	cursor: pointer;
 }
 
