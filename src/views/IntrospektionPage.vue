@@ -13,8 +13,8 @@ const paper3 = ref(null);
 const paper4 = ref(null);
 
 let currentLocation = ref(1);
-const numOfPapers = ref(4);
-const maxLocation = ref(numOfPapers.value + 1);
+const numOfPapers = 4;
+const maxLocation = numOfPapers + 1;
 
 function openBook() {
 	book.value.style.transform = 'translateX(50%)';
@@ -34,7 +34,7 @@ function closeBook(isAtBeginning) {
 }
 
 function goNextPage() {
-	if (currentLocation.value < maxLocation.value) {
+	if (currentLocation.value < maxLocation) {
 		switch (currentLocation.value) {
 			case 1:
 				openBook();
@@ -55,7 +55,7 @@ function goNextPage() {
 				closeBook(false);
 				break;
 			default:
-				throw new Error('unkown state');
+				throw new Error('unknown state');
 		}
 		currentLocation.value++;
 	}
@@ -74,7 +74,6 @@ function goPrevPage() {
 				paper2.value.style.zIndex = 3;
 				break;
 			case 4:
-				openBook();
 				paper3.value.classList.remove('flipped');
 				paper3.value.style.zIndex = 2;
 				break;
@@ -84,7 +83,7 @@ function goPrevPage() {
 				paper4.value.style.zIndex = 1;
 				break;
 			default:
-				throw new Error('unkown state');
+				throw new Error('unknown state');
 		}
 
 		currentLocation.value--;
@@ -122,7 +121,6 @@ function goPrevPage() {
 			<q>Who looks outside, dreams; who looks inside, awakes.</q>
 			<span style="margin-left: 1rem">Carl Jung</span>
 		</div>
-
 		<ul class="poems-list">
 			<li
 				v-for="poem in poems"
@@ -265,7 +263,7 @@ function goPrevPage() {
 	position: relative;
 	width: 350px;
 	height: 516px;
-	transition: transform 0.6s;
+	transition: transform 0.5s;
 }
 
 .paper {
@@ -286,7 +284,7 @@ function goPrevPage() {
 	top: 0;
 	left: 0;
 	transform-origin: left;
-	transition: transform 0.6s ease-in-out;
+	transition: transform 0.5s;
 }
 
 .front {
@@ -360,31 +358,15 @@ button:hover i {
 
 /* Paper stack order */
 #p1 {
-	z-index: 4;
-}
-
-#p2 {
 	z-index: 3;
 }
 
-#p3 {
+#p2 {
 	z-index: 2;
 }
 
-#p4 {
+#p3 {
 	z-index: 1;
-}
-
-#p2 .front,
-#p2 .back {
-	/* background-color: aqua; */
-	transform-origin: left !important;
-	transition: transform 0.6s ease-in-out !important;
-}
-
-#p2 .flipped .front,
-#p2 .flipped .back {
-	transform: rotateY(-180deg) !important;
 }
 
 @media (max-width: 650px) {
