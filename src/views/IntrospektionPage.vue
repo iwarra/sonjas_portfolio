@@ -330,13 +330,14 @@ function goPrevPage() {
 }
 
 #b4 {
-	background-color: #447c8f;
 	padding-left: 0;
+	background-color: #e6cbd8;
 
 	p {
 		padding: 1rem;
-		color: white;
+		color: rgb(26, 26, 26);
 		line-height: 1.4em;
+		letter-spacing: 0.1ch;
 	}
 }
 
@@ -407,7 +408,14 @@ button:hover i {
 		gap: 1rem;
 		align-items: center;
 		justify-content: center;
-		padding-block: 3rem;
+		padding-block: 4rem;
+		background: rgb(49, 92, 116);
+		background: linear-gradient(
+			180deg,
+			rgba(49, 92, 116, 1) 0%,
+			rgba(114, 170, 181, 1) 29%,
+			rgba(251, 241, 248, 1) 96%
+		);
 	}
 }
 </style>

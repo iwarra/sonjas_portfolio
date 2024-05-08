@@ -21,7 +21,7 @@ a {
 	display: flex;
 	flex-direction: column;
 	gap: 3rem;
-	min-width: 80svw;
+	min-width: 75svw;
 	max-width: 1000px;
 	min-height: 100svh;
 }
