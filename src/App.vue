@@ -15,7 +15,7 @@ import MailIcon from './components/icons/MailIcon.vue';
 					<img
 						class="logo"
 						src="/js.png"
-						alt="logo" />
+						alt="logo with author's initials" />
 					<span>Sonja Josipovic</span>
 				</a>
 			</div>
@@ -64,8 +64,7 @@ header {
 		flex-direction: row;
 		align-items: center;
 		gap: 1rem;
-
-		color: #808080;
+		color: rgb(81, 81, 81);
 	}
 
 	.logo {
