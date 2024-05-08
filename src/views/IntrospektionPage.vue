@@ -117,7 +117,7 @@ function goPrevPage() {
 		<div class="divider"></div>
 		<div
 			class="quote"
-			style="padding-top: 2rem">
+			style="padding-top: 3rem">
 			<q>Who looks outside, dreams; who looks inside, awakes.</q>
 			<span style="margin-left: 1rem">Carl Jung</span>
 		</div>
@@ -408,7 +408,8 @@ button:hover i {
 		gap: 1rem;
 		align-items: center;
 		justify-content: center;
-		padding-block: 4rem;
+		padding-block: 5rem;
+		margin-top: 3rem;
 		background: rgb(49, 92, 116);
 		background: linear-gradient(
 			180deg,
