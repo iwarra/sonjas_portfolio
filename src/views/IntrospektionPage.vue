@@ -261,8 +261,8 @@ function goPrevPage() {
 
 .book {
 	position: relative;
-	width: 350px;
-	height: 516px;
+	width: 360px;
+	height: 530px;
 	transition: transform 0.5s;
 }
 
@@ -310,6 +310,11 @@ function goPrevPage() {
 	flex-direction: column;
 	justify-content: center;
 	padding-left: 2rem;
+	gap: 0.5rem;
+
+	h2 {
+		font-size: 26px;
+	}
 }
 
 #f1 {
@@ -336,8 +341,8 @@ function goPrevPage() {
 	p {
 		padding: 1rem;
 		color: rgb(26, 26, 26);
-		line-height: 1.4em;
-		letter-spacing: 0.1ch;
+		line-height: 1.3em;
+		word-spacing: 1px;
 	}
 }
 
@@ -381,7 +386,6 @@ button:hover i {
 		padding-inline: 1rem;
 
 		img {
-			/* flex: 1 0 100%; */
 			max-width: 80svw;
 		}
 
@@ -397,7 +401,7 @@ button:hover i {
 	}
 }
 
-@media (min-width: 820px) {
+@media (min-width: 850px) {
 	.poems-list {
 		display: none;
 	}
