@@ -8,7 +8,7 @@ collections:
   - name: 'blog'
     label: 'Blog'
     create: true
-    folder: 'public/content'
+    folder: 'src/posts'
     # format: 'frontmatter' #read by Nuxt Content-module
     slug: '{{slug}}-{{year}}-{{month}}-{{day}}'
     fields:
@@ -18,4 +18,11 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Language', name: 'language', default: 'en', widget: 'hidden' }
       - { label: 'Summary', name: 'summary', widget: 'text' }
-      - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
+      - {
+          label: 'Featured Image',
+          name: 'thumbnail',
+          widget: 'image',
+          'required': false,
+          'media_library': { 'maz_file_size': 1012000 },
+        }
+      - {}
