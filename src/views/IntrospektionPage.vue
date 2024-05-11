@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import { poems } from '../content/introspektion.js';
+import { poems } from '../data/introspektion.js';
 import ArrowLeft from '../components/icons/ArrowLeftIcon.vue';
 import ArrowRight from '../components/icons/ArrowRightIcon.vue';
 

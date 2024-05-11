@@ -1,5 +1,5 @@
 <script setup>
-import { books } from '../content/books';
+import { books } from '../data/books';
 </script>
 
 <template>
