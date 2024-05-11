@@ -15,7 +15,7 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Category', name: 'category', widget: 'list' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Language', name: 'language', default: 'en', widget: 'hidden' }
+      - { label: 'Language', name: 'language', default: 'sv', widget: 'hidden' }
       - { label: 'Summary', name: 'summary', widget: 'text' }
       - {
           label: 'Featured Image',
@@ -28,6 +28,16 @@ collections:
           label: 'Gallery',
           name: 'galleryImages',
           widget: 'list',
-          summary: '{{fields.image}}',
-          field: { label: 'Image', name: 'image', widget: 'image' },
+          summary: 'Gallery',
+          field:
+            {
+              label: 'Image',
+              name: 'image',
+              widget: 'object',
+              fields:
+                [
+                  { label: 'Image', name: 'image', widget: 'image' },
+                  { label: 'Alt Text', name: 'alt', widget: 'string' },
+                ],
+            },
         }
