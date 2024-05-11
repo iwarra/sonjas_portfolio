@@ -8,8 +8,7 @@ collections:
   - name: 'blog'
     label: 'Blog'
     create: true
-    folder: 'src/posts'
-    # format: 'frontmatter' #read by Nuxt Content-module
+    folder: 'public/content'
     slug: '{{slug}}-{{year}}-{{month}}-{{day}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
@@ -22,7 +21,13 @@ collections:
           label: 'Featured Image',
           name: 'thumbnail',
           widget: 'image',
-          'required': false,
-          'media_library': { 'maz_file_size': 1012000 },
+          required: false,
+          media_library: { max_file_size: 1012000 },
         }
-      - {}
+      - {
+          label: 'Gallery',
+          name: 'galleryImages',
+          widget: 'list',
+          summary: '{{fields.image}}',
+          field: { label: 'Image', name: 'image', widget: 'image' },
+        }
