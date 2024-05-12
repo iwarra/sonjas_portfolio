@@ -1,14 +1,18 @@
+site_url: https://sonjajosipovic.se/
+locale: 'sv'
+
 backend:
   name: git-gateway
   branch: main
 
-media_folder: 'public/blog_media'
+media_folder: '/src/cms/uploads/'
+public_folder: '/public/uploads'
 
 collections:
   - name: 'blog'
     label: 'Blog'
     create: true
-    folder: 'public/content'
+    folder: '/src/blog/_posts'
     slug: '{{slug}}-{{year}}-{{month}}-{{day}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
@@ -37,7 +41,7 @@ collections:
               fields:
                 [
                   { label: 'Image', name: 'image', widget: 'image' },
-                  { label: 'Alt Text', name: 'alt', widget: 'string' },
+                  { label: 'Alt Text', name: 'alt', widget: 'string', required: false },
                 ],
             },
         }
