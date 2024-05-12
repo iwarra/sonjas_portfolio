@@ -14,6 +14,7 @@ collections:
     create: true
     folder: '/src/blog/_posts'
     slug: '{{slug}}-{{year}}-{{month}}-{{day}}'
+    extension: 'json'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
