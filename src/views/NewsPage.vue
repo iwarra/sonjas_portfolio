@@ -22,14 +22,15 @@ posts.value = Object.entries(getJsonFiles).map((entry) => {
 	<div>
 		<div>
 			<h1>Nyheter</h1>
-			<div
+			<h2 style="margin-top: 1rem">Under uppbyggnad...</h2>
+			<!-- <div
 				v-for="post in posts"
 				:key="post.title">
 				<RouterLink :to="`/nyheter/${post.url}`">
 					<h2>{{ post.title }}</h2>
 				</RouterLink>
 				<span>{{ post.summary }}</span>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </template>

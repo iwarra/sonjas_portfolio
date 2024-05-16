@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<h1>{{ post.title }}</h1>
+		<!-- <h1>{{ post.title }}</h1>
 		<span>Publicerad: {{ post.date.slice(0, 10) }}</span>
-		<p>{{ post.body }}</p>
+		<p>{{ post.body }}</p> -->
 	</div>
 </template>
 
