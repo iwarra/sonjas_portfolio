@@ -3,6 +3,7 @@ import HomePage from './views/HomePage.vue';
 import AboutPage from './views/AboutPage.vue';
 import NewsPage from './views/NewsPage.vue';
 import IntrospektionPage from './views/IntrospektionPage.vue';
+import BlogPost from './views/BlogPost.vue';
 
 const routes = [
 	{ path: '/', component: HomePage },
@@ -12,6 +13,7 @@ const routes = [
 	},
 	{ path: '/om', component: AboutPage },
 	{ path: '/nyheter', component: NewsPage },
+	{ path: '/nyheter/:title', component: BlogPost },
 ];
 
 const router = createRouter({
