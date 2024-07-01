@@ -7,7 +7,7 @@ import { books } from '../data/books';
 		<div class="hero-content">
 			<img
 				class="hero-image"
-				src="/src/assets/sonja_and_nikki.jpg"
+				src="/src/assets/sonja_and_nikki.webp"
 				alt="" />
 			<div class="hero-info">
 				<h1>
@@ -63,7 +63,7 @@ import { books } from '../data/books';
 				<h3>{{ book.title }}</h3>
 				<div class="book-info">
 					<img
-						src="/src/assets/introspektion.jpg"
+						src="/src/assets/introspektion.webp"
 						alt="" />
 					<div class="book-text">
 						<p v-html="book.description"></p>
