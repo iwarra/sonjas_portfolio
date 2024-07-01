@@ -5,10 +5,14 @@ import { books } from '../data/books';
 <template>
 	<div class="hero">
 		<div class="hero-content">
-			<img
-				class="hero-image"
-				src="/src/assets/sonja_and_nikki.webp"
-				alt="" />
+			<picture class="hero-image">
+				<source
+					srcset="/src/assets/sonja_and_nikki_smaller.webp"
+					media="(max-width: 800px)" />
+				<img
+					src="/src/assets/sonja_and_nikki.webp"
+					alt="" />
+			</picture>
 			<div class="hero-info">
 				<h1>
 					<span class="accent">Välkommen</span>
