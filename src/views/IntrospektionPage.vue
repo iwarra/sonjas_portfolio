@@ -98,20 +98,20 @@ function goPrevPage() {
 		</h1>
 		<div class="intro">
 			<img
-				src="/src/assets/introspektion_bok.jpg"
+				src="/src/assets/introspektion_bok.webp"
 				alt="" />
 			<div>
-				<p class="text-large">
+				<p>
 					Introspektion är en diktsamling och Sonjas första bok på svenska. Den innehåller över
 					hundra dikter som reflekterar över människor, livet och vår plats i det. Den täcker olika
 					känslor och stämningar - kärlek, kamp, självutforskning och tillståndet i världen omkring
 					oss.
 				</p>
-				<p class="text-large">
+				<p>
 					Boken talar om mörker och ljus och våra känslor och vårt humör, och hur vi kan vara som
 					människor - både de goda och de fula sidorna av vår natur.
 				</p>
-				<p class="text-large">Ta en djupdykning inuti och se vad du hittar.</p>
+				<p>Ta en djupdykning inuti och se vad du hittar.</p>
 			</div>
 		</div>
 		<div class="divider"></div>
@@ -242,7 +242,10 @@ function goPrevPage() {
 	gap: 2rem;
 
 	img {
-		max-width: 40%;
+		flex: 0 0 30%;
+		max-width: 30%;
+		height: auto;
+		object-fit: contain;
 	}
 }
 
@@ -381,17 +384,17 @@ button:hover i {
 	}
 
 	.intro {
+		display: flex;
 		flex-direction: column;
 		align-items: center;
+		margin: 0 auto;
+		gap: 1.5rem;
 		padding-inline: 1rem;
+		max-width: 85svw;
+	}
 
-		img {
-			max-width: 80svw;
-		}
-
-		.text-large {
-			text-align: center;
-		}
+	img {
+		max-width: 100% !important;
 	}
 
 	.quote {

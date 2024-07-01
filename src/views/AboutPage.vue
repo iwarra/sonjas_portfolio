@@ -7,10 +7,10 @@
 		</h1>
 		<div class="about">
 			<img
-				src="/src/assets/sonja_josipovic.jpg"
+				src="/src/assets/sonja_josipovic.webp"
 				alt="" />
 			<div class="about-text">
-				<p class="text-large">
+				<p>
 					Sonja Josipovic är författare, frilansjournalist och psykolog. Hon föddes i
 					ex-Jugoslavien. Första dikten skrev hon när hon bara var sju år gammal och då började
 					hennes resa där papper och penna blev en oundviklig del av hennes liv. Hon har skrivit
@@ -19,7 +19,7 @@
 					artiklar i modemagasin, låttexter för olika popartister, dikter, noveller och en roman som
 					fick stor uppmärksamhet i hennes hemland.
 				</p>
-				<p class="text-large">
+				<p>
 					Sonja flyttade till Sverige 2012. Med mycket ansträngning och beslutsamhet erövrade hon
 					språkbarriärerna och skrev på ett främmande språk. Hennes första bok i Sverige kom ut
 					2024. Introspektion är en diktsamling där hon skriver om vanliga människor, deras känslor,
@@ -32,21 +32,46 @@
 </template>
 
 <style scoped>
+h1 {
+	text-align: center;
+	padding-bottom: 1.8rem;
+}
+
 .about {
 	display: flex;
-	gap: 2rem;
-	padding-block: 2rem;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+	padding-inline: 1rem;
+	max-width: 85svw;
 }
 
-.about-text {
-	padding: 1rem;
+@media (min-width: 900px) {
+	h1 {
+		text-align: start;
+	}
+
+	.about {
+		display: flex;
+		flex-direction: row;
+		gap: 2rem;
+		padding-block: 2rem;
+	}
+
+	.about-text {
+		padding: 1rem;
+		/* flex: 1; */
+	}
+
+	img {
+		flex: 0 0 30%;
+		max-width: 30%;
+		height: auto;
+		object-fit: contain;
+	}
 }
 
-img {
-	max-width: 30vw;
-}
-
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
 	h1 {
 		text-align: center;
 	}
@@ -64,5 +89,5 @@ img {
 			text-align: center;
 		}
 	}
-}
+} */
 </style>
