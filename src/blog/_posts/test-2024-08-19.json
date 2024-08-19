@@ -1,0 +1,23 @@
+{
+  "language": "sv",
+  "title": "Test",
+  "date": "2024-08-19T17:15:00.000Z",
+  "category": [
+    "Test"
+  ],
+  "body": "Testing testing a new format for a fab blog!",
+  "summary": "Test for the new blog",
+  "thumbnail": "/public/uploads/whatsapp-bild-2024-05-01-kl.-21.39.52_4dcfb05c.jpg",
+  "galleryImages": [
+    {
+      "image": {
+        "image": "/public/uploads/ef6a0962.jpg"
+      }
+    },
+    {
+      "image": {
+        "image": "/public/uploads/ecf6a1017.jpg"
+      }
+    }
+  ]
+}
