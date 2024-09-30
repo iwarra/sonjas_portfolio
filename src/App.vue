@@ -42,7 +42,7 @@ import MailIcon from './components/icons/MailIcon.vue';
 					><LinkedinIcon
 				/></a>
 				<a
-					href="https://www.instagram.com/sonja_josipovic/"
+					href="https://www.instagram.com/_sonja_josipovic_forfattare/"
 					class="border-icon">
 					<InstagramIcon />
 				</a>
