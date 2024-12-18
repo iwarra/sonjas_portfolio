@@ -32,7 +32,7 @@ import MailIcon from './components/icons/MailIcon.vue';
 			<div class="footer-text"><small>Sonja Josipovic &copy; 2024</small></div>
 			<div class="footer-icons">
 				<a
-					href="mailto:sonja.josipovic@gmail.com"
+					href="mailto:press@sonjajosipovic.se"
 					class="border-icon"
 					><MailIcon
 				/></a>
