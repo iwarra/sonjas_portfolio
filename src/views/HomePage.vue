@@ -80,6 +80,15 @@ import { books } from '../data/books';
 				</div>
 			</li>
 		</ul>
+		<div
+			class="divider"
+			style="margin-top: 3rem"></div>
+	</section>
+
+	<section class="instagram">
+		<div
+			class="elfsight-app-a5d52e43-8708-4fb5-8db3-274897213fb5"
+			data-elfsight-app-lazy></div>
 	</section>
 </template>
 
@@ -200,8 +209,13 @@ ul {
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
-	padding-top: 4rem;
-	padding-inline: 1rem;
+	padding: 4rem 1rem 0rem 1rem;
+	/* padding-inline: 1rem; */
+	/* margin-bottom: 2rem; */
+}
+
+.instagram {
+	margin-top: 5rem;
 }
 
 @media (max-width: 600px) {
