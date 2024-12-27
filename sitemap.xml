@@ -10,7 +10,22 @@
 <url>
   <loc>https://sonjajosipovic.se/</loc>
   <lastmod>2024-12-27T13:41:14+00:00</lastmod>
+  <priority>1.0</priority>
 </url>
-
+<url>
+  <loc>https://sonjajosipovic.se/om</loc>
+  <lastmod>2024-12-27T13:41:14+00:00</lastmod>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://sonjajosipovic.se/introspektion</loc>
+  <lastmod>2024-12-27T13:41:14+00:00</lastmod>
+</url>
+<url>
+  <loc>https://sonjajosipovic.se/nyheter</loc>
+  <lastmod>2024-12-27T13:41:14+00:00</lastmod>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
 
 </urlset>
