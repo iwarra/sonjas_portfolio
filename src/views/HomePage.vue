@@ -251,6 +251,10 @@ ul {
 	.divider {
 		order: 3;
 	}
+
+	.instagram {
+		max-width: 95svw;
+	}
 }
 
 @media (max-width: 800px) {
