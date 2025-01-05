@@ -422,10 +422,6 @@ button:hover i {
 }
 
 @media (max-width: 650px) {
-	h1 {
-		text-align: center;
-	}
-
 	.quote {
 		display: flex;
 		flex-direction: column;

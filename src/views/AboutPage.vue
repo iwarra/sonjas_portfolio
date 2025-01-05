@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div>
+	<div class="wrapper">
 		<h1>
 			<span class="accent">Om Sonja Josipovic</span>
 		</h1>
@@ -32,9 +32,11 @@
 </template>
 
 <style scoped>
-h1 {
-	text-align: center;
-	padding-bottom: 1.8rem;
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	max-width: 90svw;
 }
 
 .about {
@@ -42,8 +44,8 @@ h1 {
 	flex-direction: column;
 	align-items: center;
 	gap: 1.5rem;
-	padding-inline: 1rem;
-	max-width: 85svw;
+	/* padding-inline: 1rem; */
+	/* max-width: 85svw; */
 }
 
 @media (min-width: 900px) {
