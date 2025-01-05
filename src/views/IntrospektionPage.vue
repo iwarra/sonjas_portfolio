@@ -279,13 +279,6 @@ function goPrevPage() {
 	flex-wrap: wrap;
 	align-items: center;
 	gap: 2rem;
-
-	/*img {
-		flex: 0 0 30%;
-		max-width: 30%;
-		height: auto;
-		object-fit: contain;
-	} */
 }
 
 .text-wrapper {
@@ -428,45 +421,10 @@ button:hover i {
 	z-index: 1;
 }
 
-/* @media (min-width: 1024px) {
-	.intro {
-		flex-direction: row;
-	}
-
-	.responsive-image,
-	.text-wrapper {
-		height: 100%;
-		width: 40%;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.text-wrapper {
-		order: 2;
-	}
-	.responsive-img {
-		order: 1;
-	}
-} */
-
 @media (max-width: 650px) {
 	h1 {
 		text-align: center;
 	}
-
-	/* .intro {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: 0 auto;
-		gap: 1.5rem;
-		padding-inline: 1rem;
-		max-width: 85svw;
-	}
-
-	img {
-		max-width: 100% !important;
-	} */
 
 	.quote {
 		display: flex;
