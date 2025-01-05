@@ -97,22 +97,58 @@ function goPrevPage() {
 			<span class="accent">Introspektion</span>
 		</h1>
 		<div class="intro">
-			<img
+			<!-- <img
 				src="/src/assets/introspektion_bok.webp"
-				alt="" />
-			<div>
+				alt=""
+				class="responsive-img" /> -->
+			<div class="text-wrapper">
+				<h2>En diktsamling som berör det mänskliga sinnet</h2>
 				<p>
-					Introspektion är en diktsamling och Sonjas första bok på svenska. Den innehåller över
-					hundra dikter som reflekterar över människor, livet och vår plats i det. Den täcker olika
-					känslor och stämningar - kärlek, kamp, självutforskning och tillståndet i världen omkring
-					oss.
+					<em>Introspektion</em> är en enastående diktsamling och författaren Sonja Josipovics
+					första bok på svenska. Med över hundra tankeväckande dikter tar boken med dig på en resa
+					genom livet, känslor och de eviga frågorna om vår plats i världen. Denna samling berör en
+					mängd teman – kärlek, kamp, självutforskning och reflektion över tillståndet i vår
+					omvärld. Dikterna dyker djupt ner i kontrasten mellan mörker och ljus, och hur dessa
+					påverkar våra känslor, vår natur och vårt sätt att vara som människor.
 				</p>
 				<p>
-					Boken talar om mörker och ljus och våra känslor och vårt humör, och hur vi kan vara som
-					människor - både de goda och de fula sidorna av vår natur.
+					Introspektion handlar om oss – vanliga människor och de frågor vi ställer oss genom livet.
+					Det är en bok som utforskar de hinder vi möter, både yttre och inre. Ibland är vi segrare,
+					ibland inte, men varje steg är en del av vår resa. <br />
+					Författaren utforskar de osynliga, mäktiga hinder som vi ofta finner inom oss själva. Vem
+					är egentligen vår största fiende? Svaret ligger närmare än vi tror – det speglas i oss
+					själva.
+				</p>
+				<h3>Poesi som förenar psykologi och filosofi</h3>
+				<p>
+					Författaren kombinerar poesi, psykologi och filosofi för att skapa en djupgående
+					läsupplevelse. Genom Introspektion bjuds du in till en resa av självreflektion, där du
+					uppmanas att titta inåt och möta både de vackra och de mörka sidorna av det mänskliga
+					sinnet.
 				</p>
 				<p>Ta en djupdykning inuti och se vad du hittar.</p>
 			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="review">
+			<h3>Andra har sagt:</h3>
+			<p>
+				Introspektion är en magisk resa in i människans innersta väsen – en diktsamling som både rör
+				och skakar om. Med en röst som balanserar mellan det sårbara och det kraftfulla, bjuder
+				författaren in läsaren till en förtrolig konversation om livet, dess frågor och de osynliga
+				hinder vi alla möter. Varje dikt är som en spegel, där man både ser sig själv och världen på
+				nya sätt. Språket är enkelt men samtidigt poetiskt rikt, fyllt av känslor som stannar kvar
+				långt efter att sista sidan är vänd. Texterna griper tag om hjärtat, får oss att reflektera
+				och erbjuder tröst i sin ärlighet. Här ryms både ljus och mörker, vinst och förlust – allt
+				insvept i en vacker melodi av ord. Introspektion är inte bara en bok, det är en upplevelse.
+				Det är en påminnelse om vår mänsklighet, om våra styrkor och brister, och om vikten av att
+				ibland stanna upp och se inåt. En oemotståndlig samling för alla som älskar litteratur som
+				berör och väcker eftertanke. <br />
+				Jag rekommenderar den varmt – det här är en diktsamling som förtjänar att bli läst, och
+				älskad, om och om igen.
+			</p>
+			<p>Boken får: 5/5⭐️</p>
+			<a href="https://www.instagram.com/p/DEUaVmWOIwV/?img_index=1">@wandersinbookland</a>
 		</div>
 		<div class="divider"></div>
 		<div
@@ -121,6 +157,7 @@ function goPrevPage() {
 			<q>Who looks outside, dreams; who looks inside, awakes.</q>
 			<span style="margin-left: 1rem">Carl Jung</span>
 		</div>
+		<div class="divider"></div>
 		<ul class="poems-list">
 			<li
 				v-for="poem in poems"
@@ -234,19 +271,28 @@ function goPrevPage() {
 	display: flex;
 	flex-direction: column;
 	gap: 3rem;
+	max-width: 90svw;
 }
 
 .intro {
 	display: flex;
-	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
 	gap: 2rem;
 
-	img {
+	/*img {
 		flex: 0 0 30%;
 		max-width: 30%;
 		height: auto;
 		object-fit: contain;
-	}
+	} */
+}
+
+.text-wrapper {
+	order: 1;
+}
+.responsive-img {
+	order: 2;
 }
 
 .poems-list {
@@ -318,6 +364,10 @@ function goPrevPage() {
 	h2 {
 		font-size: 26px;
 	}
+
+	p {
+		font-size: 18px;
+	}
 }
 
 #f1 {
@@ -378,12 +428,33 @@ button:hover i {
 	z-index: 1;
 }
 
+/* @media (min-width: 1024px) {
+	.intro {
+		flex-direction: row;
+	}
+
+	.responsive-image,
+	.text-wrapper {
+		height: 100%;
+		width: 40%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.text-wrapper {
+		order: 2;
+	}
+	.responsive-img {
+		order: 1;
+	}
+} */
+
 @media (max-width: 650px) {
 	h1 {
 		text-align: center;
 	}
 
-	.intro {
+	/* .intro {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -395,7 +466,7 @@ button:hover i {
 
 	img {
 		max-width: 100% !important;
-	}
+	} */
 
 	.quote {
 		display: flex;
