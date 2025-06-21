@@ -1,9 +1,20 @@
 {
   "language": "sv",
   "title": "Poesisöndag i Bergholmstorpets trädgård",
-  "body": "\n\n\nSöndagen den 15 juni samlades poesiälskare i den idylliska Bergholmstorpets trädgård för att njuta av diktläsningar från olika författare och entusiaster. I det gröna, blomstrande landskapet skapades en stämning fylld av eftertanke och inspiration.\n\nEn av dem som intog scenen var Sonja Josipovic, som läste tre dikter ur sin samling *Introspektion*. Publiken mötte varje dikt med varma applåder, och många blev positivt överraskade när de fick veta att svenska inte är författarens modersmål. Hennes språkbehandling och känsla för rytm och bildspråk gjorde stort intryck.\n\nDiktläsningarna varvades med musikaliska inslag, vilket ytterligare förhöjde den magiska atmosfären och skapade en harmonisk helhetsupplevelse.\n\nEfter att ha njutit av poesi och musik i solskenet fanns det gott om tid för att mingla och samtala med både författare och andra besökare. Bergholmstorpets trädgård, med sitt charmiga café och hembakade godsaker, bidrog till den avslappnade och inbjudande stämningen. Det blev en eftermiddag att minnas – \nfylld av dikter, inspiration och gemenskap.\n\n\n![sonja josipovic poesi](/public/uploads/c.jpg)\n\n\n\n![sonja josipovic posing with her poetry book](/public/uploads/coka.jpg)",
+  "body": "Söndagen den 15 juni samlades poesiälskare i den idylliska Bergholmstorpets trädgård för att njuta av diktläsningar från olika författare och entusiaster. I det gröna, blomstrande landskapet skapades en stämning fylld av eftertanke och inspiration.\n\nEn av dem som intog scenen var Sonja Josipovic, som läste tre dikter ur sin samling *Introspektion*. Publiken mötte varje dikt med varma applåder, och många blev positivt överraskade när de fick veta att svenska inte är författarens modersmål. Hennes språkbehandling och känsla för rytm och bildspråk gjorde stort intryck.\n\nDiktläsningarna varvades med musikaliska inslag, vilket ytterligare förhöjde den magiska atmosfären och skapade en harmonisk helhetsupplevelse.\n\nEfter att ha njutit av poesi och musik i solskenet fanns det gott om tid för att mingla och samtala med både författare och andra besökare. Bergholmstorpets trädgård, med sitt charmiga café och hembakade godsaker, bidrog till den avslappnade och inbjudande stämningen. Det blev en eftermiddag att minnas – \nfylld av dikter, inspiration och gemenskap.",
   "thumbnail": "/public/uploads/sonja.jpg",
-  "galleryImages": [],
+  "galleryImages": [
+    {
+      "image": {
+        "image": "/public/uploads/coka.jpg"
+      }
+    },
+    {
+      "image": {
+        "image": "/public/uploads/c.jpg"
+      }
+    }
+  ],
   "summary": "Med sina innerliga dikter ur Introspektion satte Sonja Josipovic ett starkt avtryck i Bergholmstorpets trädgård.",
   "date": "2025-06-17T15:00:00.000Z"
 }
