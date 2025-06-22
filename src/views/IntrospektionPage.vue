@@ -187,7 +187,7 @@ function goPrevPage() {
 							id="f1"
 							class="front-content">
 							<img
-								src="/src/assets/introspektion.jpg"
+								src="/introspektion.jpg"
 								alt="" />
 						</div>
 					</div>
