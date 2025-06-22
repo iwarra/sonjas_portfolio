@@ -1,4 +1,5 @@
 <script setup>
+import BookList from '/src/components/BookList.vue';
 import { books } from '../data/books';
 </script>
 
@@ -59,27 +60,7 @@ import { books } from '../data/books';
 
 	<section class="books">
 		<h2><span class="accent">Sonjas böcker</span></h2>
-		<ul class="books-list">
-			<li
-				class="book-row"
-				v-for="book in books"
-				:key="book.title">
-				<h3>{{ book.title }}</h3>
-				<div class="book-info">
-					<img
-						src="/src/assets/introspektion.webp"
-						alt="" />
-					<div class="book-text">
-						<p v-html="book.description"></p>
-						<RouterLink
-							to="/introspektion"
-							style="text-decoration: underline"
-							>Läs mer</RouterLink
-						>
-					</div>
-				</div>
-			</li>
-		</ul>
+		<BookList :books="books" />
 		<div
 			class="divider"
 			style="margin-top: 3rem"></div>
@@ -141,34 +122,6 @@ import { books } from '../data/books';
 	max-width: 45%;
 }
 
-.book-row {
-	display: flex;
-	flex-direction: column;
-	/* display: grid;
-	grid-template-columns: 1fr 3fr; */
-	gap: 2rem;
-	align-items: start;
-
-	h3 {
-		margin-top: 0;
-	}
-
-	img {
-		height: 380px;
-	}
-}
-
-.book-info {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 2rem;
-}
-
-ul {
-	padding: 0;
-}
-
 .cta {
 	align-self: flex-start;
 	border: 1px solid #979696;
@@ -210,8 +163,6 @@ ul {
 	flex-direction: column;
 	gap: 1.5rem;
 	padding: 4rem 1rem 0rem 1rem;
-	/* padding-inline: 1rem; */
-	/* margin-bottom: 2rem; */
 }
 
 .instagram {
@@ -222,29 +173,6 @@ ul {
 	.about-text {
 		grid-template-columns: 1fr;
 		gap: 0;
-		text-align: center;
-	}
-
-	.books h2 {
-		text-align: center;
-	}
-
-	.book-row {
-		align-items: center;
-	}
-
-	.book-info {
-		flex-direction: column;
-		justify-items: center;
-		gap: 1rem;
-		padding-inline: 1rem;
-
-		img {
-			flex: 0 1 100%;
-		}
-	}
-
-	.book-text {
 		text-align: center;
 	}
 
@@ -284,6 +212,10 @@ ul {
 	.hero-image {
 		order: 2;
 		max-width: 80svw;
+	}
+
+	.books h2 {
+		text-align: center;
 	}
 }
 </style>

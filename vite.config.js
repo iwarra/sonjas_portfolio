@@ -6,7 +6,12 @@ export default defineConfig({
 	plugins: [vue()],
 	resolve: {
 		alias: {
-			vue: 'vue/dist/vue.esm-bundler.js', // Optional, but ensures correct version
+			vue: 'vue/dist/vue.esm-bundler.js',
+		},
+	},
+	server: {
+		watch: {
+			ignored: ['**/public/sitemap.xml'],
 		},
 	},
 });
